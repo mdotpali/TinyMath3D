@@ -73,8 +73,10 @@
 		AFA7F0F12D76494800FAFE24 = {
 			isa = PBXGroup;
 			children = (
-				AFA7F0FD2D76494800FAFE24 /* TinyMath3D */,
-				AFA7F1092D76494800FAFE24 /* TinyMath3DTests */,
+				AFA7F11F2D764B4A00FAFE24 /* TinyMath3D.Examples */,
+				AFA7F11E2D764B2D00FAFE24 /* TinyMath3D.Core */,
+				AFA7F11D2D764B0600FAFE24 /* TinyMath3D.Includes */,
+				AFA7F11C2D764ADA00FAFE24 /* TinyMath3D.Tests */,
 				AFA7F0FC2D76494800FAFE24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +88,36 @@
 				AFA7F1052D76494800FAFE24 /* TinyMath3DTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AFA7F11C2D764ADA00FAFE24 /* TinyMath3D.Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F1092D76494800FAFE24 /* TinyMath3DTests */,
+			);
+			path = TinyMath3D.Tests;
+			sourceTree = "<group>";
+		};
+		AFA7F11D2D764B0600FAFE24 /* TinyMath3D.Includes */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F0FD2D76494800FAFE24 /* TinyMath3D */,
+			);
+			path = TinyMath3D.Includes;
+			sourceTree = "<group>";
+		};
+		AFA7F11E2D764B2D00FAFE24 /* TinyMath3D.Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TinyMath3D.Core;
+			sourceTree = "<group>";
+		};
+		AFA7F11F2D764B4A00FAFE24 /* TinyMath3D.Examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TinyMath3D.Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
