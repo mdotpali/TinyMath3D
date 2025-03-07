@@ -6,12 +6,96 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AFB107722D7B7911006682A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AFA7F0FB2D76494800FAFE24 /* TinyMath3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyMath3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB107742D7B7911006682A2 /* Vector3Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Vector3Tests; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AF6381C82D7B9E7500771CE5 /* Exceptions for "Tests" folder in "TinyMath3D" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Vector3Test/Vector3Test.cpp,
+			);
+			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
+		};
+		AF6381C92D7B9E7500771CE5 /* Exceptions for "Tests" folder in "Vector3Tests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Vector3Test/Vector3Test.cpp,
+			);
+			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
+		};
+		AF6381CC2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Vector3Tests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Vectors/Vector3.cpp,
+			);
+			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
+		};
+		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Vectors/Vector3.cpp,
+				Vectors/Vector3.hpp,
+			);
+			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		AF6381CD2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Compile Sources" phase from "Vector3Tests" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = AFB107702D7B7911006682A2 /* Sources */;
+			membershipExceptions = (
+				Vectors/Vector3.hpp,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AFB107652D7B4E20006682A2 /* Core */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */,
+				AF6381CC2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Vector3Tests" target */,
+				AF6381CD2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Compile Sources" phase from "Vector3Tests" target */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AFB1076F2D7B7689006682A2 /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AF6381C82D7B9E7500771CE5 /* Exceptions for "Tests" folder in "TinyMath3D" target */,
+				AF6381C92D7B9E7500771CE5 /* Exceptions for "Tests" folder in "Vector3Tests" target */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AFA7F0F82D76494800FAFE24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB107712D7B7911006682A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -24,6 +108,8 @@
 		AFA7F0F12D76494800FAFE24 = {
 			isa = PBXGroup;
 			children = (
+				AFB1076F2D7B7689006682A2 /* Tests */,
+				AFB107652D7B4E20006682A2 /* Core */,
 				AFA7F0FC2D76494800FAFE24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -32,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA7F0FB2D76494800FAFE24 /* TinyMath3D.framework */,
+				AFB107742D7B7911006682A2 /* Vector3Tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +156,25 @@
 			productReference = AFA7F0FB2D76494800FAFE24 /* TinyMath3D.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AFB107732D7B7911006682A2 /* Vector3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB107782D7B7911006682A2 /* Build configuration list for PBXNativeTarget "Vector3Tests" */;
+			buildPhases = (
+				AFB107702D7B7911006682A2 /* Sources */,
+				AFB107712D7B7911006682A2 /* Frameworks */,
+				AFB107722D7B7911006682A2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vector3Tests;
+			packageProductDependencies = (
+			);
+			productName = Vector3Tests;
+			productReference = AFB107742D7B7911006682A2 /* Vector3Tests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -80,6 +186,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					AFA7F0FA2D76494800FAFE24 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					AFB107732D7B7911006682A2 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -99,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				AFA7F0FA2D76494800FAFE24 /* TinyMath3D */,
+				AFB107732D7B7911006682A2 /* Vector3Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -115,6 +225,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		AFA7F0F72D76494800FAFE24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB107702D7B7911006682A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,7 +326,7 @@
 		AFA7F1112D76494800FAFE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -245,6 +362,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = gtest.framework;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -259,10 +377,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.16.0/include,
+					"\"/Users/mdotpali/Documents/3- Dev/TinyMath3D/TinyMath3D\"",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/googletest/1.16.0/lib;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-pthread",
+					"-lgtest",
+				);
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -273,7 +400,7 @@
 		AFA7F1122D76494800FAFE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -309,6 +436,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = gtest.framework;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -317,12 +445,52 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.16.0/include,
+					"\"/Users/mdotpali/Documents/3- Dev/TinyMath3D/TinyMath3D\"",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/googletest/1.16.0/lib;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-pthread",
+					"-lgtest",
+				);
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFB107792D7B7911006682A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.16.0/include,
+					"\"/Users/mdotpali/Documents/3- Dev/TinyMath3D/TinyMath3D\"",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/googletest/1.16.0/lib;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AFB1077A2D7B7911006682A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
+				"HEADER_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/googletest/1.16.0/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/homebrew/Cellar/googletest/1.16.0/lib;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -343,6 +511,15 @@
 			buildConfigurations = (
 				AFA7F10F2D76494800FAFE24 /* Debug */,
 				AFA7F1102D76494800FAFE24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB107782D7B7911006682A2 /* Build configuration list for PBXNativeTarget "Vector3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB107792D7B7911006682A2 /* Debug */,
+				AFB1077A2D7B7911006682A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
