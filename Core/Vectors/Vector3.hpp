@@ -8,9 +8,8 @@
 #pragma once
 #include <vector>
 
-namespace TinyMath3D {
-namespace Core {
-namespace Vectors {
+namespace TinyMath3D::Vectors {
+
 class Vector3 {
   public:
 	// Data members
@@ -42,19 +41,17 @@ class Vector3 {
 	Vector3 cross(const Vector3 &other) const;
 
 	// Utility functions
-	float distance(Vector3 &other) const;
+	float distance(const Vector3 &other) const;
 	float angle(const Vector3 &other) const;
 
 	// Static utility methods
 	static Vector3 zero();
 	static Vector3 one();
+	static Vector3 up();
 	static Vector3 right();
 	static Vector3 forward();
 };
 
-// Non-member opertors
-Vector3 operator*(float scaler, const Vector3 &vector);
+Vector3 operator*(float scalar, const Vector3& vector);
 
-} // namespace Vectors
-} // namespace Core
-} // namespace TinyMath3D
+} // namespace TinyMath3D::Vectors

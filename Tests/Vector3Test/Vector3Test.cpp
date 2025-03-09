@@ -5,10 +5,10 @@
 //  Created by Mostafa on 07.03.25.
 //
 
-#include "Core/Vectors/Vector3.hpp"
+#include <Core/Vectors/Vector3.hpp>
 #include <gtest/gtest.h>
 
-using namespace TinyMath3D::Core::Vectors;
+using namespace TinyMath3D::Vectors;
 // Simple test to start with
 TEST(Vector3Test, DefaultConstructor) {
 	Vector3 v;
