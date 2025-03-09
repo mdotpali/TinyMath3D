@@ -5,7 +5,7 @@
 //  Created by Mostafa on 07.03.25.
 //
 
-#include <Core/Vectors/Vector3.hpp>
+#include "Core/Vectors/Vector3.hpp"
 #include <gtest/gtest.h>
 
 using namespace TinyMath3D::Core::Vectors;
