@@ -42,6 +42,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Vectors/Vector3.cpp,
+				Vectors/Vector4.cpp,
 			);
 			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
 		};
@@ -50,6 +51,8 @@
 			membershipExceptions = (
 				Vectors/Vector3.cpp,
 				Vectors/Vector3.hpp,
+				Vectors/Vector4.cpp,
+				Vectors/Vector4.hpp,
 			);
 			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
 		};
