@@ -6,6 +6,7 @@
 //
 
 #include <Core/Vectors/Vector3.hpp>
+#include <Core/Matrices/Matrix4.hpp>
 #include <gtest/gtest.h>
 
 using namespace TinyMath3D::Vectors;
@@ -15,6 +16,7 @@ TEST(Vector3Test, DefaultConstructor) {
 	EXPECT_FLOAT_EQ(v.x, 0.0f);
 	EXPECT_FLOAT_EQ(v.y, 0.0f);
 	EXPECT_FLOAT_EQ(v.z, 0.0f);
+
 }
 
 int main(int argc, char **argv) {

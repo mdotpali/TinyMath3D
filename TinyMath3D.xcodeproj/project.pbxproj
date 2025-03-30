@@ -41,6 +41,7 @@
 		AF6381CC2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Vector3Tests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Matrices/Matrix4.cpp,
 				Vectors/Vector3.cpp,
 				Vectors/Vector4.cpp,
 			);
@@ -49,6 +50,8 @@
 		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Matrices/Matrix4.cpp,
+				Matrices/Matrix4.hpp,
 				Vectors/Vector3.cpp,
 				Vectors/Vector3.hpp,
 				Vectors/Vector4.cpp,
@@ -63,6 +66,7 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = AFB107702D7B7911006682A2 /* Sources */;
 			membershipExceptions = (
+				Matrices/Matrix4.hpp,
 				Vectors/Vector3.hpp,
 			);
 		};
