@@ -4,6 +4,7 @@
 //
 //  Created by Mostafa on 27.03.25.
 //
+#pragma once
 
 #include <Core/Vectors/Vector3.hpp>
 #include <cmath>
@@ -59,8 +60,8 @@ class Matrix4 {
 	}
 
 	// Inline Constructor from a float pointer
-	inline explicit Matrix4(const float *data) {
-		for (int i = 0; i++; i < 16) {
+	inline explicit Matrix4(const float &data) {
+		for (int i = 0; i < 16; i++) {
 			m[i] = data;
 		}
 	}
@@ -79,7 +80,7 @@ class Matrix4 {
 	inline static Matrix4 Zero() {
 		Matrix4 mat;
 		for (int i = 0; i < 16; i++) {
-			m[i] = 0;
+			mat.m[i] = 0;
 		}
 		return mat;
 	}
@@ -99,6 +100,7 @@ class Matrix4 {
 		mat.m[0] = sx;
 		mat.m[5] = sy;
 		mat.m[10] = sz;
+		return mat;
 	}
 
 	// Returns Rotation Matrix for X
@@ -141,15 +143,16 @@ class Matrix4 {
 	                           float zFar);
 	static Matrix4 Orthographic(float left, float right, float bottom,
 	                            float top, float zNear, float zFar);
-	static Matrix4 LookAt(const Vector3 &eye, const Vector3 &center,
-	                      const Vector3 &up);
+	static Matrix4 LookAt(const Vectors::Vector3 &eye,
+	                      const Vectors::Vector3 &center,
+	                      const Vectors::Vector3 &up);
 
 	//----------------------------------------------------------------------------------------
 	// Basic Accessors
 	//----------------------------------------------------------------------------------------
 	// Access Element by (row, column).
 	inline float &operator()(int row, int col) { return m[col * 4 + row]; }
-	inline const float &operator()(int row, int col) {
+	inline const float &operator()(int row, int col) const {
 		return m[col * 4 + row];
 	}
 
@@ -161,19 +164,27 @@ class Matrix4 {
 	// Multiplications
 	//----------------------------------------------------------------------------------------
 	// Matrix4 * Matrix4
-	Matrix4 operator*(const Matrix4& rhs) const;
-	Matrix4 operator*=(const Matrix4& rhs);
-	
+	Matrix4 operator*(const Matrix4 &rhs) const;
+	Matrix4 &operator*=(const Matrix4 &rhs);
+
 	//----------------------------------------------------------------------------------------
 	// Transpose, Inversion
 	//----------------------------------------------------------------------------------------
-	inline Matrix4 Transposed() const;
-	inline void Transpose(){
-		*this = Transposed();
+	Matrix4 Transposed() const;
+	inline void Transpose() { *this = Transposed(); }
+
+	inline static Matrix4 Invert(const Matrix4 &mat) {
+		if (mat.IsAffine())
+			return InvertAffine(mat);
+
+		return InvertFullCofactorMethod(mat);
 	}
-	
-	static Matrix4 Invert(const Matrix4& mat);
-	void Invert();
+	inline void Invert() {
+		if (IsAffine())
+			*this = InvertAffine(*this);
+		else
+			*this = InvertFullCofactorMethod(*this);
+	}
 	//----------------------------------------------------------------------------------------
 	// Utilities
 	//----------------------------------------------------------------------------------------
@@ -196,5 +207,13 @@ class Matrix4 {
 		m[14] = 0.0f;
 		m[15] = 1.0f;
 	}
+	inline bool IsAffine() const {
+		return (std::fabs(m[3]) < 1e-6f && std::fabs(m[7]) < 1e-6f &&
+		        std::fabs(m[11]) < 1e-6f && std::fabs(m[15] - 1.0f) < 1e-6f);
+	}
+
+  private:
+	static Matrix4 InvertAffine(const Matrix4 &mat);
+	static Matrix4 InvertFullCofactorMethod(const Matrix4 &mat);
 };
 } // namespace TinyMath3D::Matrices

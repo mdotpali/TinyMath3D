@@ -4,6 +4,7 @@
 //
 //  Created by Mostafa on 07.03.25.
 //
+#pragma once
 
 #include <algorithm>
 #include <cmath>
@@ -124,7 +125,7 @@ class Vector3 {
 	inline float angle(const Vector3 &other) const {
 		float lenProduct = length() * other.length();
 		// Avoid division by zero
-		if (lenProduct < 1e-6f)
+		if (lenProduct < 0)
 			return 0.0f;
 
 		// The dot product divided by the product of lengths gives cosine of the
