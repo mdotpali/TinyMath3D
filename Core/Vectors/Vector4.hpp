@@ -25,8 +25,8 @@ class Vector4 {
 	    : x(scalar), y(scalar), z(scalar), w(scalar) {}
 
 	// Static utility methods
-	Vector4 inline zero() { return Vector4(); }
-	Vector4 inline one() { return Vector4(1, 1, 1, 1); }
+	Vector4 inline Zero() { return Vector4(); }
+	Vector4 inline One() { return Vector4(1, 1, 1, 1); }
 
 	// Element access
 	inline float &operator[](int i) {
@@ -90,12 +90,12 @@ class Vector4 {
 	}
 
 	// Vector Operations
-	inline float length() const { return sqrt(x * x + y * y + z * z + w * w); }
-	inline float dot(const Vector4 &other) const {
+	inline float Length() const { return sqrt(x * x + y * y + z * z + w * w); }
+	inline float Dot(const Vector4 &other) const {
 		return x * other.x + y * other.y + z * other.z + w * other.w;
 	}
-	inline void normalize() {
-		float len = length();
+	inline void Normalize() {
+		float len = Length();
 		if (len > 0) {
 			float invLen = 1.0f / len;
 			x *= invLen;
@@ -104,9 +104,9 @@ class Vector4 {
 			w *= invLen;
 		}
 	}
-	inline Vector4 normalized() const {
+	inline Vector4 Normalized() const {
 		Vector4 result(*this);
-		result.normalize();
+		result.Normalize();
 		return result;
 	}
 
@@ -119,18 +119,18 @@ class Vector4 {
 	}
 
 	// Utility functions
-	inline float distance(const Vector4 &other) const {
-		return (other - *this).length();
+	inline float Distance(const Vector4 &other) const {
+		return (other - *this).Length();
 	}
-	inline float angle(const Vector4 &other) const {
-		float lenProduct = length() * other.length();
+	inline float Angle(const Vector4 &other) const {
+		float lenProduct = Length() * other.Length();
 		// Avoid division by zero
 		if (lenProduct < 1e-6f)
 			return 0.0f;
 
 		// The dot product divided by the product of lengths gives cosine of the
 		// angle
-		float cosAngle = dot(other) / lenProduct;
+		float cosAngle = Dot(other) / lenProduct;
 
 		// Clamp to avoid numerical errors that could result in invalid acos
 		// input

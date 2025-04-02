@@ -27,20 +27,21 @@
 		AF6381C82D7B9E7500771CE5 /* Exceptions for "Tests" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Vector3Test/Vector3Test.cpp,
+				Vector3Test/Test_Vectors.cpp,
 			);
 			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
 		};
 		AF6381C92D7B9E7500771CE5 /* Exceptions for "Tests" folder in "Vector3Tests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Vector3Test/Vector3Test.cpp,
+				Vector3Test/Test_Vectors.cpp,
 			);
 			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
 		};
 		AF6381CC2D7BA29F00771CE5 /* Exceptions for "Core" folder in "Vector3Tests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Matrices/Matrix3.cpp,
 				Matrices/Matrix4.cpp,
 				Vectors/Vector3.cpp,
 				Vectors/Vector4.cpp,
@@ -50,6 +51,8 @@
 		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Matrices/Matrix3.cpp,
+				Matrices/Matrix3.hpp,
 				Matrices/Matrix4.cpp,
 				Matrices/Matrix4.hpp,
 				Vectors/Vector3.cpp,
@@ -255,7 +258,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -296,7 +299,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

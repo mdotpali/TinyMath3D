@@ -24,11 +24,11 @@ class Vector3 {
 
 	// Static utility methods
 	// Static utility methods
-	Vector3 inline zero() { return Vector3(); }
-	Vector3 inline one() { return Vector3(1, 1, 1); }
-	Vector3 inline right() { return Vector3(1, 0, 0); }
-	Vector3 inline up() { return Vector3(0, 1, 0); }
-	Vector3 inline forward() { return Vector3(0, 0, 1); }
+	Vector3 inline Zero() { return Vector3(); }
+	Vector3 inline One() { return Vector3(1, 1, 1); }
+	Vector3 inline Right() { return Vector3(1, 0, 0); }
+	Vector3 inline Up() { return Vector3(0, 1, 0); }
+	Vector3 inline Forward() { return Vector3(0, 0, 1); }
 	// Element access
 	inline float &operator[](int i) {
 		// Potentially add an assert(i >= 0 && i < 4) in debug
@@ -95,16 +95,16 @@ class Vector3 {
 	}
 
 	// Vector Operations
-	inline float length() const { return sqrt(x * x + y * y + z * z); }
-	inline float dot(const Vector3 &other) const {
+	inline float Length() const { return sqrt(x * x + y * y + z * z); }
+	inline float Dot(const Vector3 &other) const {
 		return x * other.x + y * other.y + z * other.z;
 	}
-	Vector3 cross(const Vector3 &other) const {
+	Vector3 Cross(const Vector3 &other) const {
 		return Vector3(y * other.z - z * other.y, z * other.x - x * other.z,
 		               x * other.y - y * other.x);
 	}
-	inline void normalize() {
-		float len = length();
+	inline void Normalize() {
+		float len = Length();
 		if (len > 0) {
 			float invLen = 1.0f / len;
 			x *= invLen;
@@ -112,25 +112,25 @@ class Vector3 {
 			z *= invLen;
 		}
 	}
-	inline Vector3 normalized() const {
+	inline Vector3 Normalized() const {
 		Vector3 result(*this);
-		result.normalize();
+		result.Normalize();
 		return result;
 	}
 
 	// Utility functions
-	inline float distance(const Vector3 &other) const {
-		return (other - *this).length();
+	inline float Distance(const Vector3 &other) const {
+		return (other - *this).Length();
 	}
-	inline float angle(const Vector3 &other) const {
-		float lenProduct = length() * other.length();
+	inline float Angle(const Vector3 &other) const {
+		float lenProduct = Length() * other.Length();
 		// Avoid division by zero
 		if (lenProduct < 0)
 			return 0.0f;
 
 		// The dot product divided by the product of lengths gives cosine of the
 		// angle
-		float cosAngle = dot(other) / lenProduct;
+		float cosAngle = Dot(other) / lenProduct;
 
 		// Clamp to avoid numerical errors that could result in invalid acos
 		// input
