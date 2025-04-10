@@ -51,6 +51,8 @@
 		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Converters/CartesianPolar2DConverter.cpp,
+				Converters/CartesianPolar2DConverter.hpp,
 				Matrices/Matrix3.cpp,
 				Matrices/Matrix3.hpp,
 				Matrices/Matrix4.cpp,
