@@ -53,6 +53,8 @@
 			membershipExceptions = (
 				Converters/CartesianPolar2DConverter.cpp,
 				Converters/CartesianPolar2DConverter.hpp,
+				Converters/CartesianSpherical3DConverter.cpp,
+				Converters/CartesianSpherical3DConverter.hpp,
 				Matrices/Matrix3.cpp,
 				Matrices/Matrix3.hpp,
 				Matrices/Matrix4.cpp,
