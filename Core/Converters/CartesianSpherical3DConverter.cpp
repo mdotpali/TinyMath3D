@@ -33,7 +33,7 @@ CartesianToSpherical3D(const float &x, const float &y, const float &z) {
 	} else {
 		result.heading = atan2(x, z); // Left-handed: X → Z
 	}
-	result.heading = NormalizeAngle2Pi(result.heading);
+	result.heading = TinyMath3D::Converters::CartesianSpherical3DConverter::NormalizeAngle2Pi(result.heading);
 	return result;
 }
 

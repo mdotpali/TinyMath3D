@@ -25,6 +25,7 @@ struct Spherical3DCoordinates {
 	float pitch;
 };
 class CartesianSpherical3DConverter {
+public:
 	static Cartesian3DCoordinates SphericalToCartesian3D(const float &r,
 	                                                     const float &heading,
 	                                                     const float &pitch);
