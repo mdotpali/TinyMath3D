@@ -1083,7 +1083,7 @@ $(r,\theta,z)$
 - Horizontal angle from $\theta$ to $h$. which is heading. 
 - Vertical angle $\phi$ renamed to $p$ . which is $pitch$. positive is downward. 
 
-![Description](images/Pastedimage20250406225635.png
+![Description](images/Pastedimage20250406225635.png)
 
 ### 7.3.4 Aliasing of Spherical Coordinates
 - An alias of $(h,p)$ can be generated $(h \pm 180^\circ, 180^\circ - p)$
