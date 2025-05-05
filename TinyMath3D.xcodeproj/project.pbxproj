@@ -48,6 +48,29 @@
 			);
 			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
 		};
+		AF88FB752DC923460026983F /* Exceptions for "Documents" folder in "TinyMath3D" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"3D Math Primer.md",
+				"images/Pasted image 20250403085212.png",
+				"images/Pasted image 20250403085323.png",
+				"images/Pasted image 20250403091916.png",
+				"images/Pasted image 20250403092001.png",
+				"images/Pasted image 20250403092247.png",
+				"images/Pasted image 20250403092824.png",
+				"images/Pasted image 20250403093244.png",
+				"images/Pasted image 20250403093547.png",
+				"images/Pasted image 20250403093853.png",
+				"images/Pasted image 20250403093910.png",
+				"images/Pasted image 20250406170631.png",
+				"images/Pasted image 20250406170644.png",
+				"images/Pasted image 20250406170916.png",
+				"images/Pasted image 20250406212512.png",
+				"images/Pasted image 20250406214252.png",
+				"images/Pasted image 20250406225635.png",
+			);
+			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
+		};
 		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -59,6 +82,14 @@
 				Matrices/Matrix3.hpp,
 				Matrices/Matrix4.cpp,
 				Matrices/Matrix4.hpp,
+				Rotation/AxisAngle.cpp,
+				Rotation/AxisAngle.hpp,
+				Rotation/EulerAngle.cpp,
+				Rotation/EulerAngle.hpp,
+				Rotation/Quaternion.cpp,
+				Rotation/Quaternion.hpp,
+				Rotation/Rotation.cpp,
+				Rotation/Rotation.hpp,
 				Vectors/Vector3.cpp,
 				Vectors/Vector3.hpp,
 				Vectors/Vector4.cpp,
@@ -80,6 +111,14 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		AF88FB722DC923050026983F /* Documents */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AF88FB752DC923460026983F /* Exceptions for "Documents" folder in "TinyMath3D" target */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
 		AFB107652D7B4E20006682A2 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -122,6 +161,7 @@
 		AFA7F0F12D76494800FAFE24 = {
 			isa = PBXGroup;
 			children = (
+				AF88FB722DC923050026983F /* Documents */,
 				AFB1076F2D7B7689006682A2 /* Tests */,
 				AFB107652D7B4E20006682A2 /* Core */,
 				AFA7F0FC2D76494800FAFE24 /* Products */,
