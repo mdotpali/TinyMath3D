@@ -57,7 +57,7 @@
 	
 - **Why is upright space interesting?**
     - To transform a point between object space and upright space requires only rotation, and to transform a point between upright space and world space requires only a change of location, which is usually called a translation
-	![[Pasted image 20250403085323.png]]
+	![Description](images/Pastedimage20250403085323.png)
 ## 3.3 Basis Vectors and Coordinate Space Transformations
 
 we know how to express a point in one coordinate space, and we need to express that point in some other coordinate space. The technical term for this computation is a coordinate space transformation. We need to transform the position from world space to object space (in the example of the sandwich) or from object space to world space (in the example of the light).
@@ -360,8 +360,8 @@ $$
 
 By understanding how the matrix transforms the standard basis vectors, we know everything there is to know about the transformation. Since the results of transforming the standard basis are simply the rows2 of the matrix, we interpret those rows as the basis vectors of a coordinate space.
 
-![[Pasted image 20250403091916.png]]
-![[Pasted image 20250403092001.png]]
+![Description](images/Pastedimage20250403091916.png)
+![Description](images/Pastedimage20250403092001.png)
 
 - The rows of a square matrix can be interpreted as the basis vectors of a coordinate space.
 - To transform a vector from the original coordinate space to the new coordinate space, we multiply the vector by the matrix.
@@ -377,7 +377,7 @@ By understanding how the matrix transforms the standard basis vectors, we know e
 
 ## 5.1 Rotation
 
-![[Pasted image 20250403092247.png]]
+![Description](images/Pastedimage20250403092247.png)
 
 **Rotation about the x-axis:**
 $$
@@ -466,12 +466,12 @@ $$
 - Reflection (also called mirroring) is a transformation that “flips” the object about a line (in 2D) or a plane (in 3D).
 - Reﬂection can be accomplished by applying a scale factor of -1
 
-![[Pasted image 20250403092824.png]]
+![Description](images/Pastedimage20250403092824.png)
 ## 5.5 Shearing
 
 - Figure 5.10 Shearing in 2D Shearing is a transformation that “skews” the coordinate space, stretching it nonuniformly. Angles are not preserved; however, surprisingly, areas and volumes are. The basic idea is to add a multiple of one coordinate to the other.
 
-![[Pasted image 20250403093244.png]]
+![Description](images/Pastedimage20250403093244.png)
 **Shear in the XY plane:**
 $$
 H_{xy}(s, t) =
@@ -547,7 +547,7 @@ $$
 
 - In this table, a Y means that the transformation in that row always has the property associated with that column. The absence of a Y does not mean “never”; rather, it means “not always.”
 
-![[Pasted image 20250403093547.png]]
+![Description](images/Pastedimage20250403093547.png)
 
 
 ---
@@ -652,8 +652,7 @@ The determinant has an interesting geometric interpretation:
 
 - In 2D: The determinant equals the signed area of the parallelogram or skew box that has the basis vectors as two sides
 
-![[Pasted image 20250403093910.png]]
-
+![Description](images/Pastedimage20250403093910.png)
 - In 3D: The determinant equals the signed volume of the parallelepiped formed by the transformed basis vectors
 - The sign indicates orientation: negative if the transformation includes reflection ("turns inside out")
 - Zero determinant: The transformation contains a projection (loss of dimension)
@@ -974,14 +973,15 @@ $$
 Thus, the extra translation in an affine transformation changes only the last row of the 4×4 matrix. The upper 3×3 portion, which contains the linear transformation, is not affected.
 ## 6.5 4×4 Matrices and Perspective Projection
 
-![[Pasted image 20250406170631.png]]
+![Description](images/Pastedimage20250406170631.png)
 
 - Because the center of projection is in front of the projection plane, the projectors cross before striking the plane, and thus the image is inverted. As we move an object farther away from the center of projection, its orthographic projection remains constant, but the perspective projection gets smaller. This is a very important visual cue known as perspective foreshortening.
 
 ### 6.5.1 A Pinhole Camera
 
 - pinhole camera is a box with a tiny hole on one end. Rays of light enter the pinhole (thus converging at a point), and then strike the opposite end of the box, which is the projection plane
-![[Pasted image 20250406170644.png]]
+
+![Description](images/Pastedimage20250406170644.png)
 
 - Let’s see if we can’t compute, for an arbitrary point p, the 3D coordinates of p ′ , which is p projected through the pinhole onto the projection plane.
 - Projecting onto the plane $z = -d$
@@ -989,7 +989,7 @@ Thus, the extra translation in an affine transformation changes only the last ro
 \mathbf{p} = [x \quad y \quad z] \quad \Longrightarrow \quad \mathbf{p}' = [x' \quad y' \quad z'] = \left[ \frac{-d x}{z}, \frac{-d y}{z}, -d \right]
 $$
 - he extra minus signs create unnecessary complexities, and so we move the plane of projection to z = d, which is in front of the center of projection, as shown in Figure 6.9. Of course, this would never work for a real pinhole camera, since the purpose of the pinhole in the first place is to allow in only light that passes through a single point.
-![[Pasted image 20250406170916.png]]
+![Description](images/Pastedimage20250406170916.png)
 - **Projecting onto the plane \( z = d \)**
 
 $$
@@ -1063,7 +1063,8 @@ $$
 - if we add another angle. => spherical coordinates
 ### 7.3.1 Cylindrical Coordinates
 $(r,\theta,z)$
-![[Pasted image 20250406212512.png]]
+
+![Description](images/Pastedimage20250406212512.png)
 
 ### 7.3.2 Spherical Coordinates
 - It is with direction and distance => direction will be set with two angles
@@ -1072,7 +1073,8 @@ $(r,\theta,z)$
 - **Step 3**: Rotate arm downward by angle $\phi$. Now arm points in the direction specified by the polar angles $\theta$ and $\phi$.
 - **Step 4**: Displace from origin along this direction by the distance r. 
 
-- ![[Pasted image 20250406214252.png]]
+![Description](images/Pastedimage20250406214252.png)
+
 ### 7.3.3 Some Polar Conventions Useful in 3D
 - Problems of Right Handed Mathematical Conventions:
 	- default +x is not convenient in 3d. usually +z is forward
@@ -1080,7 +1082,8 @@ $(r,\theta,z)$
 	- We will use left hand approach
 - Horizontal angle from $\theta$ to $h$. which is heading. 
 - Vertical angle $\phi$ renamed to $p$ . which is $pitch$. positive is downward. 
-![[Pasted image 20250406225635.png]]
+
+![Description](images/Pastedimage20250406225635.png
 
 ### 7.3.4 Aliasing of Spherical Coordinates
 - An alias of $(h,p)$ can be generated $(h \pm 180^\circ, 180^\circ - p)$
