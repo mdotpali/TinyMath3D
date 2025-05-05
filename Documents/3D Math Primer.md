@@ -53,7 +53,7 @@
 
 - An object’s upright space is, in a certain sense, “halfway” between world space and its object space. The axes of upright space are parallel with the axes of world space, but the origin of upright space is coincident with the origin of object space.
 
-	![Description](images/Pasted image 20250403085212.png)
+	![Description](images/Pastedimage20250403085212.png)
 	
 - **Why is upright space interesting?**
     - To transform a point between object space and upright space requires only rotation, and to transform a point between upright space and world space requires only a change of location, which is usually called a translation
