@@ -301,6 +301,7 @@ $$
 
 ### Row vector × matrix (valid):
 $$
+\begin{aligned}
 \begin{bmatrix}
 x & y & z
 \end{bmatrix}
@@ -315,6 +316,7 @@ xm_{11} + ym_{21} + zm_{31} &
 xm_{12} + ym_{22} + zm_{32} &
 xm_{13} + ym_{23} + zm_{33}
 \end{bmatrix}
+\end{aligned}
 $$
 
 
