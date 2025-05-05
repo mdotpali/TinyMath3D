@@ -302,13 +302,10 @@ $$
 ### Row vector × matrix (valid):
 $$
 \begin{aligned}
-\begin{bmatrix}
-x & y & z
+\begin{bmatrix}x & y & z
 \end{bmatrix}
-\begin{bmatrix}
-m_{11} & m_{12} & m_{13} \\
-m_{21} & m_{22} & m_{23} \\
-m_{31} & m_{32} & m_{33}
+\begin{bmatrix}m_{11} & m_{12} & m_{13} \\
+m_{21} & m_{22} & m_{23} \\m_{31} & m_{32} & m_{33}
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -323,10 +320,8 @@ $$
 ### Matrix × column vector (valid):
 
 $$
-\begin{bmatrix}
-m_{11} & m_{12} & m_{13} \\
-m_{21} & m_{22} & m_{23} \\
-m_{31} & m_{32} & m_{33}
+\begin{bmatrix}m_{11} & m_{12} & m_{13} \\
+m_{21} & m_{22} & m_{23} \\m_{31} & m_{32} & m_{33}
 \end{bmatrix}
 \begin{bmatrix}
 x \\
