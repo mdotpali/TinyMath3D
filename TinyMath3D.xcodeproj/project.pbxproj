@@ -6,11 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AF88FB742DC923460026983F /* 3D Math Primer.md in Resources */ = {isa = PBXBuildFile; fileRef = AF88FB732DC923460026983F /* 3D Math Primer.md */; };
-		AF88FB9C2DC94E290026983F /* index.md in Resources */ = {isa = PBXBuildFile; fileRef = AF88FB9B2DC94E290026983F /* index.md */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		AFB107722D7B7911006682A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,9 +19,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AF88FB732DC923460026983F /* 3D Math Primer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "3D Math Primer.md"; sourceTree = "<group>"; };
-		AF88FB982DC94CAC0026983F /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = _config.yml; sourceTree = "<group>"; };
-		AF88FB9B2DC94E290026983F /* index.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = index.md; sourceTree = "<group>"; };
 		AFA7F0FB2D76494800FAFE24 /* TinyMath3D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TinyMath3D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB107742D7B7911006682A2 /* Vector3Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Vector3Tests; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,27 +47,6 @@
 				Vectors/Vector4.cpp,
 			);
 			target = AFB107732D7B7911006682A2 /* Vector3Tests */;
-		};
-		AF88FB752DC923460026983F /* Exceptions for "Documents" folder in "TinyMath3D" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				images/Pastedimage20250403085323.png,
-				images/Pastedimage20250403091916.png,
-				images/Pastedimage20250403092001.png,
-				images/Pastedimage20250403092247.png,
-				images/Pastedimage20250403092824.png,
-				images/Pastedimage20250403093244.png,
-				images/Pastedimage20250403093547.png,
-				images/Pastedimage20250403093853.png,
-				images/Pastedimage20250403093910.png,
-				images/Pastedimage20250406170631.png,
-				images/Pastedimage20250406170644.png,
-				images/Pastedimage20250406170916.png,
-				images/Pastedimage20250406212512.png,
-				images/Pastedimage20250406214252.png,
-				images/Pastedimage20250406225635.png,
-			);
-			target = AFA7F0FA2D76494800FAFE24 /* TinyMath3D */;
 		};
 		AFB1076E2D7B4E73006682A2 /* Exceptions for "Core" folder in "TinyMath3D" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -117,19 +88,6 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AF88FB722DC923050026983F /* Documents */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				AF88FB752DC923460026983F /* Exceptions for "Documents" folder in "TinyMath3D" target */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		AF88FB992DC94CDC0026983F /* _layouts */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = _layouts;
-			sourceTree = "<group>";
-		};
 		AFB107652D7B4E20006682A2 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -172,14 +130,9 @@
 		AFA7F0F12D76494800FAFE24 = {
 			isa = PBXGroup;
 			children = (
-				AF88FB9B2DC94E290026983F /* index.md */,
-				AF88FB992DC94CDC0026983F /* _layouts */,
-				AF88FB982DC94CAC0026983F /* _config.yml */,
-				AF88FB722DC923050026983F /* Documents */,
 				AFB1076F2D7B7689006682A2 /* Tests */,
 				AFB107652D7B4E20006682A2 /* Core */,
 				AFA7F0FC2D76494800FAFE24 /* Products */,
-				AF88FB732DC923460026983F /* 3D Math Primer.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -287,8 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF88FB9C2DC94E290026983F /* index.md in Resources */,
-				AF88FB742DC923460026983F /* 3D Math Primer.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
