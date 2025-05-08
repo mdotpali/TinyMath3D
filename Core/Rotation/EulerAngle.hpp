@@ -23,10 +23,10 @@ class EulerAngle {
 	float bank = 0.0f;
 
 	/// @brief Default constructor (identity rotation)
-	constexpr EulerAngle() = default;
+	 EulerAngle() = default;
 
 	/// @brief Constructor from angles (in radians)
-	constexpr EulerAngle(float h, float p, float b)
+	 EulerAngle(float h, float p, float b)
 	    : heading(h), pitch(p), bank(b) {}
 
 	/// @brief Normalize all angles to be within [-pi, pi]
